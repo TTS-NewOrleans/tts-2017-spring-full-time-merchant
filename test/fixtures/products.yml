@@ -20,15 +20,19 @@ two:
 #
 # Table name: products
 #
-#  id          :integer          not null, primary key
-#  name        :string
-#  price       :decimal(, )
-#  quantity    :integer
-#  description :text
-#  brand_id    :integer
-#  category_id :integer
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
+#  id                  :integer          not null, primary key
+#  name                :string
+#  price               :decimal(, )
+#  quantity            :integer
+#  description         :text
+#  brand_id            :integer
+#  category_id         :integer
+#  created_at          :datetime         not null
+#  updated_at          :datetime         not null
+#  avatar_file_name    :string
+#  avatar_content_type :string
+#  avatar_file_size    :integer
+#  avatar_updated_at   :datetime
 #
 # Indexes
 #
