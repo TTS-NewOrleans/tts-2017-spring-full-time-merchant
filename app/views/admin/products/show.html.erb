@@ -1,34 +1,47 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4
+                col-sm-6 col-sm-offset-3">
+      <p>
+        <%= image_tag @product.avatar.url(:medium) %>
+      </p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
+      <p>
+        <strong>Name:</strong>
+        <%= @product.name %>
+      </p>
 
-<p>
-  <strong>Quantity:</strong>
-  <%= @product.quantity %>
-</p>
+      <p>
+        <strong>Price:</strong>
+        <%= @product.price %>
+      </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+      <p>
+        <strong>Quantity:</strong>
+        <%= @product.quantity %>
+      </p>
 
-<p>
-  <strong>Brand:</strong>
-  <%= @product.brand %>
-</p>
+      <p>
+        <strong>Description:</strong>
+        <%= @product.description %>
+      </p>
 
-<p>
-  <strong>Category:</strong>
-  <%= @product.category %>
-</p>
+      <p>
+        <strong>Brand:</strong>
+        <%= @product.brand.try(:name) %>
+      </p>
 
-<%= link_to 'Edit', edit_admin_product_path(@product) %> |
-<%= link_to 'Back', admin_products_path %>
+      <p>
+        <strong>Category:</strong>
+        <%= @product.category.try(:name) %>
+      </p>
+
+      <%= link_to 'Edit', edit_admin_product_path(@product) %> |
+      <%= link_to 'Back', admin_products_path %>
+    </div>
+  </div>
+</div>
+
+
