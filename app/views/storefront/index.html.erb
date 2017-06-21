@@ -1,3 +1,5 @@
+<p id="notice"><%= notice %></p>
+
 <div class="jumbotron">
   <h1>Welcome to GOAT!</h1>
   <p>You can buy ANYTHING at GOAT!</p>
@@ -11,6 +13,18 @@
     <% else %>
       <h3>All Products</h3>
     <% end %>
+
+    <!-- Search Form -->
+    <span class="pull-right">
+      <%= form_tag(shop_path, method: :get, role: 'search', class: 'form-inline') do %>
+        <div class="form-group">
+          <%# TODO: hide the search label %>
+          <%# label_tag :search, class: 'sr-only' %>
+          <%= text_field_tag(:search, nil, placeholder: 'Search products', class: 'form-control input-sm') %>
+        </div>
+        <%= submit_tag('Search', class: 'btn btn-default btn-sm') %>
+      <% end %>
+    </span>
 
     <% @products.each do |product| %>
       <div class="col-sm-4">
