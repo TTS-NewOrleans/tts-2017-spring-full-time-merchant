@@ -1,0 +1,52 @@
+<div class="jumbotron">
+  <h1>Welcome to GOAT!</h1>
+  <p>You can buy ANYTHING at GOAT!</p>
+  <p>The only limit is you...</p>
+</div>
+
+<div class="container">
+  <div class="row">
+    <% @products.each do |product| %>
+      <div class="col-sm-4">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <%= image_tag product.avatar.url(:medium) %>
+            <span class="pull-right text-right">
+              <h5><%= product.price %></h5>
+            </span>
+            <a href="#" data-toggle="modal"
+                        data-target="#myModal_<%= product.id %>" >
+              <h5><%= product.name %></h5>
+              <small>
+                <span class="glyphicon glyphicon-plus"></span> quick info
+              </small>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModal_<%= product.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel"><%= product.name %></h4>
+            </div>
+            <div class="modal-body">
+              <p><%= number_to_currency(product.price) %></p>
+              <p><%= product.description %></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <% end %>
+  </div>
+</div>
+
+
+
