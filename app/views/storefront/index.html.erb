@@ -6,6 +6,12 @@
 
 <div class="container">
   <div class="row">
+    <% if params[:cat_id] %>
+      <h3>All <%= @category.name.titleize %></h3>
+    <% else %>
+      <h3>All Products</h3>
+    <% end %>
+
     <% @products.each do |product| %>
       <div class="col-sm-4">
         <div class="panel panel-default">
@@ -26,7 +32,7 @@
       </div>
 
       <!-- Modal -->
-      <div class="modal fade" id="myModal_<%= product.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal fade goat-modal" id="myModal_<%= product.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
