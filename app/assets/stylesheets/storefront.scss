@@ -2,6 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.modal-header {
-  background: pink;
+.jumbotron {
+  margin-top: -70px;
+  background-image: url("http://maxpixel.freegreatpicture.com/static/photo/1x/Hike-Glacier-National-Park-Montana-Mountain-Goats-98144.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 10%;
+  color: white;
 }
+
+nav.navbar-inverse {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none; }
