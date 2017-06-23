@@ -20,3 +20,37 @@
 @import 'categories';
 @import 'products';
 @import 'storefront';
+
+#alert {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: rgba(223, 240, 216, 0.8);
+}
+
+
+nav.navbar-inverse {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+
+  .navbar-nav > li > a {
+  color: white;
+  }
+
+  .navbar-nav > li > a:hover {
+    color: #9d9d9d;
+  }
+
+  .navbar-brand {
+    color: white;
+  }
+
+  .navbar-brand:hover {
+    color: #9d9d9d;
+  }
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+

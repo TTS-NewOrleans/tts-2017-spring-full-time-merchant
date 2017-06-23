@@ -38,6 +38,13 @@
   <!-- **************** -->
 
   <ul class="nav navbar-nav navbar-right">
+
+    <!-- Shopping Cart Button -->
+    <% if session[:cart_id] %>
+      <li><%= link_to fa_icon('shopping-cart', text: 'Shopping Cart'), edit_cart_path %></li>
+    <% end %>
+
+    <!-- Log In / Log Out links -->
     <% if user_signed_in? %>
       <li><%= link_to 'Account', edit_user_registration_path %></li>
       <li><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>

@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   end
 
   resource :cart, only: [:edit, :update, :destroy]
-  resources :line_items, only: [:create]
+  resources :line_items, only: [:create, :destroy]
 
   root 'storefront#index'
 
