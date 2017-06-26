@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   resource :cart, only: [:edit, :update, :destroy]
   resources :line_items, only: [:create, :destroy]
+  resources :orders, only: [:new, :create, :show]
 
   root 'storefront#index'
 
