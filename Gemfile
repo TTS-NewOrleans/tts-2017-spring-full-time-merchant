@@ -42,7 +42,7 @@ gem 'font-awesome-rails'
 gem 'stamp'
 gem 'simple_form'
 gem 'annotate'
-gem 'paperclip', '~> 5.0.0'
+gem 'paperclip', '~> 4.3.7'
 gem 'devise'
 gem 'figaro'
 
@@ -79,5 +79,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :production do
   gem 'pg'
-  gem 'aws-sdk'
+  gem 'aws-sdk', '< 2'
 end
